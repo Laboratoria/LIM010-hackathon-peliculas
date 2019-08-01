@@ -2,7 +2,7 @@ const tmdbApiKey = 'e83ff2d774d6c5b031e45a3bfbfcb919';
 const omdbApiKey = '90e275bc';
 
 const app = {
-	getMoviesFromTMDB: async (tmdbApiKey) => {
+	getMoviesFromTMDB: async (tmdbApiKey)=> {
 		// Obteniendo la data
 		const movies = await fetch(
 			`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&language=es-ES&sort_by=popularity.desc&certification_country=US&certification=G&include_adult=false&page=1&with_original_language=en`
@@ -33,11 +33,19 @@ const app = {
 		const movieResolved = await movie.json();
 
 		return movieResolved;
-	}
+	},
+
+	getMovieByGenre: async (genreId, tmdbApiKey)=> {
+		const movies = await fetch(`https://api.themoviedb.org/3/discover/movie?&apikey=${omdbApiKey}&language=es-ES&sort_by=popularity.desc&certification_country=US&certification=G&include_adult=false&include_video=false&with_genres=${genreId}&with_original_language=en`);
+
+		const movieResolved = await movie.json();
+		
+		return movieResolved;	
+	} // aun no sirve, devuelve una promesa pendiente :-(
+
 };
 
 window.app = app;
 window.tmdbApiKey = tmdbApiKey;
 window.omdbApiKey = omdbApiKey;
 
-/* ; */
