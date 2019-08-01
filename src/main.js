@@ -1,29 +1,46 @@
 const form = document.getElementById('form-search-movies');
 const searchField = document.getElementById('search-movies');
 const moviesContainer = document.getElementById('movies-container');
-const modalContainer = document.getElementById('modal-container');
+const modalbody = document.getElementById('modal-body');
+const filterGenres = document.getElementById('filter-genres')
 
 const movieDataTMDB = app.getMoviesFromTMDB(tmdbApiKey);
 
-window.onload = async () => {
-	const results = await movieDataTMDB;
-	results.slice(0, 10).forEach((movie) => {
-		moviesContainer.innerHTML += `
-     <div class="card col-md-4" id="${movie.imdb_id}">
-     <img src="http://image.tmdb.org/t/p/w185/${movie.poster_path}" class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">${movie.title}</h5>
-       <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-      </button>
-     </div>
-   </div>
-    `;
-		createModal();
+const createTemplateCard = movieList => {
+	let templateCard = '';
+	movieList.slice(0, 10).forEach((movie) => {
+		const card = `
+	  <div class="card col-md-4" id="${movie.imdb_id}">
+	  <img src="http://image.tmdb.org/t/p/w185/${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
+	  <div class="card-body">
+		<h5 class="card-title">${movie.title}</h5>
+	  </div>
+	</div>
+	 `;
+		templateCard += card;
 	});
+	moviesContainer.innerHTML = templateCard;
+	createModal();
 };
 
+window.onload = async function () {
+	const getGenres = await app.getMovieGenres(tmdbApiKey);
+	const genres = Object.values(getGenres)
+
+	genres.forEach(genresArr => {
+		genresArr.forEach(genre => {
+			filterGenres.innerHTML += `<option value='${genre.id}'>${genre.name}</option>`
+		});
+	});
+
+	const tenTopRatedMovies = await app.getMoviesFromTMDB(tmdbApiKey);
+	createTemplateCard(tenTopRatedMovies);
+};
+
+filterGenres.addEventListener('change', (event) => {
+	const selectedGenre = event.target.value;
+	console.log(selectedGenre);
+});
 
 const createModal = () => {
 	const allMovies = document.querySelectorAll('#movies-container > .card');
@@ -38,9 +55,9 @@ const createModal = () => {
 			const moviesFromTMDB = await movieDataTMDB;
 			// Ahora invoco la otra api
 			const gettingMovieOMDB = await app.getMovieByIMDB(movieId, omdbApiKey);
-			
+
 			const [movieTMDB] = moviesFromTMDB.filter(
-				movieFiltered => movieFiltered.imdb_id === movieId 
+				movieFiltered => movieFiltered.imdb_id === movieId
 			);
 
 			const { overview } = movieTMDB;
@@ -55,23 +72,15 @@ const createModal = () => {
 				Production
 			} = movie;
 
-			modalContainer.innerHTML = ` 
+			modalbody.innerHTML = ` 
             <div>${Title}</div>
             <div>${Year}</div>
             <img src="${Poster}">
             <div><p>Rating</p>${imdbRating}</div>
 			<div><p>Productora</p>${Production}</div>
 			<p>${overview}</p>
-            `;
-			$('#movieId').modal('show')
+			`;
+			$('#modal').modal('show')
 		});
 	});
-};
-
-
-
-const showModal = () => {
-	modal.classList.add('visible');
-	mask.classList.add('visible');
-	modalBg.classList.add('visible');
 };
