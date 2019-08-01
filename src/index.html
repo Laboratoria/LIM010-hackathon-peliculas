@@ -13,6 +13,17 @@
 <body>
     <h1>Cinelandia</h1>
     <p>Recomendamos pelis para toda la familia</p>
+    <form id="form-search-movies">
+        <label for="search-movies">¿Qué peli quieres buscar?</label>
+        <input type="text" name="search" id="search-movies" placeholder="Ingresa el nombre de la peli" required>
+        <input type="submit" value="Buscar peli">
+    </form>
+
+    <div>
+        <ul id="movies-container"></ul>
+    </div>
+
+
     <script src="app.js"></script>
     <script src="main.js"></script>
 </body>
