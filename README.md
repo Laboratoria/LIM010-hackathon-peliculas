@@ -1,100 +1,69 @@
-# "Hackathon" de final de _Common Core_
+# Proyecto "Hackathon" 
 
+![Cinelandia](https://user-images.githubusercontent.com/50186958/62335311-eca46d80-b490-11e9-8ef4-6d605c4eb9a5.png)
+## ¡El mejor contenido para los peques de la casa!!
 ## Índice
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+- [Índice](#índice)
+- [Resumen](#resumen)
+- [Investigación UX](#investigación-UX)
+    - [¿A quién va dirigido?](#¿A-quién-va-dirigido?)
+    - [Objetivo del Producto](#Objetivo-del-Producto)
+    - [¿Cómo soluciona las necesidades del Usuario?](#¿Cómo-soluciona-las-necesidades-del-Usuario?)
+    - [Historias de Usuario](#historias-de-usuario)
+    - [Prototipo de alta Fidelidad](#prototipo-de-alta-fidelidad)
+- [Pruebas de Usabilidad](#Pruebas-de-Usabilidad)
+    - [Aprendizaje y Oportunidades de Mejora](#Aprendizaje-y-Oportunidades-de-Mejora)   
 
- ***
+***
 
-## Preámbulo
+## Resumen
+¿Buscas distracción para los pequeños de la casa? ¿Te resulta complicado encontrar películas para tus hijos debido a la rutina diaria? Si es así, no te preocupes porque hemos hecho la mejor selección de las mejores películas infantiles. Lo mejor de todo, es que no sólo los niños van a disfrutar con estas maravillosas historias, sino que también los padres y toda la familia pasarán un buen rato con nuestra selección.
 
-Con la aparición de plataformas para ver películas en la nube, como Netflix o
-Hulu, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas /
-canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
+![Familia](https://saposyprincesas.elmundo.es/wp-content/uploads/2017/02/pareja.jpg)
 
- ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
+Ingresa haciendo click [AQUI](https://marcelimxo.github.io/LIM010-hackathon-peliculas/src)
 
-## Resumen del proyecto
+## Investigación UX
+***
+### ¿A quién va dirigido?
+Los principales usuarios de **Cinelandia** son los padres de familia que por tener horarios muy ajustados, no cuentan con el tiempo suficiente para buscar contenidos infantiles de buena calidad. Debido a la gran variedad de títulos y géneros que se encuentran en la web, les resulta tedioso realizar búsquedas largas y poco efectivas. Es importante destacar, que los niños serían nuestro usuario final indirecto, ya que son los que disfrutaran la película.  
 
-Durante estos días crearán el producto que ustedes deseen alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en Netflix,
-uno de pelis de terror... o... ¡lo que quieran!
+### Objetivo del Producto
+El objetivo de nuestro aplicativo Web es ofrecer un acceso fácil a las mejores películas y series infantiles de todos los tiempos. Nuestra idea surge por la necesidad que tienen los padres por encontrar los mejores contenidos audiovisuales para los más pequeños de la casa.
 
-## Consideraciones generales
+![madre e hijos](https://user-images.githubusercontent.com/50186958/62342322-099a6a00-b4ac-11e9-97ed-e01dd9e206b2.png)
 
-* Este proyecto se debe resolver en equipos de hasta 4 personas.
-* Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
+### ¿Cómo soluciona las necesidades del Usuario?
+Hoy en día, la relación vida laboral y familiar, es una de las preocupaciones de los padres. Tener horas disponibles y pasar tiempo de calidad con hijos es cada vez más importante por los beneficios que tiene sobre el fortalecimiento de los vínculos familiares. Sin embargo, un estudio realizado por la empresa española _Edenred_ en el año 2015, ha revelado que el 71,1% de los padres ha manifestado que no pasa el suficiente tiempo en casa para poder estar con sus hijos, indicando a su vez, que esta tendencia podría aumentar significativamente en el transcurso de los años.
 
-## Objetivos de aprendizaje
 
-* Enfrentarse a un reto de corta duración en el que pongan en práctica todo
-lo aprendido hasta ahora.
-* Que sigan desarrollando sus habilidades de trabajo en equipo. Mientras más
-personas en un equipo de trabajo, mayor complejidad para: tener un entendimiento
-común, seguir el flujo de trabajo, buscar consensos, etc.
+Es por ello, que **MARS Company** ha pensando en ofrecer una solución integral a esta problematica, emprendiendo la tarea de diseñar una interfaz agradable con una clasificación orientativa y facil de entender  tanto para los niños como para sus padres que buscan las mejores opciones de películas para el disfrute familiar en la comodidad de su hogar. Estas películas pueden ser seleccionadas a través de un buscador por nombre, o ser filtradas por tres (3) categorías: `Género`, `Las más recientes` y por `Valoración`. 
 
-## Parte Obligatoria
+Compartir tiempo con los más peques de la casa, mientras disfrutan de películas que transmiten potentes mensajes que pueden dar pie a hablar con nuestros hijos de diversos aspectos de la vida, como el esfuerzo, el amor, la igualdad o la integración de personas con discapacidad, etc, es nuestra razón de ser.
 
-* Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-por _squad_ en el que se presente el _planning_ (_project_ de Github).
-* El `README` debe contener un resumen de qué trata el proyecto, el _research_ 
-y los _sketches_.
-* El proyecto deberá presentarse publicado en github pages (no se aceptará 
-demos en local)
 
-## Consideraciones técnicas
+### Historias de Usuario
+Para el diseño y la implementación de nuestra interfaz, se consideraron las siguientes cinco (5) historias de usuario definidas en el proyecto. A partir de ellas, se establecieron los Criterios de Aceptación y Definición de Terminado, los cuales representan los requrimientos y necesidades de los usuarios _'target'_:
 
-* El diseño visual de los componentes es de libre elección de ustedes,
-sin embargo, si no quieren crearlo desde cero, pueden utilizar el que
-propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/view).
-* Tienen libertad de utilizar las tecnologías que deseen (framework de CSS, 
-plugins, etc).
+- Historia de Usuario N° 1: _"Como usuario/a al ingresar a la página quiero visualizar las películas más destacadas para seleccionar el mejor contenido para toda la familia"_ 
 
-## Horario
+- Historia de Usuario N° 2: _"Como usuario/a me interesa ver información detallada de la película como sinopsis, año de lanzamiento, género, rating"_ 
+- Historia de Usuario N° 3: _"Como usuario/a quiero buscar nombres de películas infantiles para ubicar la película de forma más rápida"_ 
 
-|       | Miércoles               | Jueves                       | Viernes                 | 
-|------ | ------------------------| ---------------------------- | ----------------------- | 
-| 8:00  | Kick off hackaton       | Daily por squad              | Hacking                 |      
-| 9:00  | Sesión de planificación | Hacking                      | Hacking                 | 
-| 10:00 | Hacking                 | Compartir link de aplicación | Detalles finales        |
-| 11:00 |                         | Presentación y Feedback      | Feria de demostraciones |    
-| 12:00 |                         |                              | Deliberación            |                  
+- Historia de Usuario N° 4: _"Como usuario/a quiero poder seleccionar una película por género para decidir el trama que quiero que vea mi hijo/a"_ 
 
-## Tips para la organización de trabajo entre UX y Front end 
+- Historia de Usuario N° 5: _"Como usuario me interesa buscar películas de acuerdo a su valoración para que mi búsqueda incluya las películas infantiles que tenga mayor votación de los medios "_ 
 
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se 
-organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo
-y a crear componentes atómicos que luego les sea fácil personalizar con CSS y 
-utilizar para crear interfaces más complejas. Además, las FE empiezan también a 
-trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de 
-estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar 
-los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Deberán tener en el planning, historias de usuario, criterios de aceptación y 
-definición de terminado.
-* Usen las ceremonias ágiles para saber en que van como equipo, dailys y 
-retrospectivas diarias son esenciales.
-* Iteren, iteren, iteren.
+- Historia de Usuario N° 6: _"Como usuario/a me interesa ordenar la búsqueda de películas por fecha de lanzamiento para saber cuales son los contenidos infantiles más recientes"_ 
 
-## ¿Qué es la Feria de demos?
+### Prototipo de alta Fidelidad
+Luego de culminar el prototipo de baja fidelidad y recibir el feedback por parte de los usuarios, se procede a elaborar el diseño de la interfaz usando Figma. A continuación se presenta la Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
 
-La feria de demos se realizará el día viernes, consiste en la dinámica de “speed dating”, 
-cada squad presentará su demo durante 3 minutos a un grupo de personas. Luego de los 3 
-minutos sonará una alarma y el grupo de personas rotará al siguiente squad, de esta forma 
-deberán presentar durante una hora. 
+[Diseño en Figma](https://www.figma.com/file/RxMoX6zYJxWA3fYBOm7tqO/CInelandia?node-id=12%3A53)
 
-* Las demos no deben durar más de 3 minutos y deben mostrar el producto y las tecnologías 
-usadas.
+## Pruebas de Usabilidad
+Se evaluó la interfaz de nuestro proyecto a fin de generar oportunidades de mejoras, tratando que la impresión de los usuarios sea la más útil y placentera posible. Para ello, nuestra meta es observar si los usuarios entienden de forma clara la navegación (Usabilidad) y el contenido de nuestra interfaz, así como también determinar si el diseño visual es agradable y cumple con los principios de heurísticas de Usabilidad.
 
+### Aprendizaje y Oportunidades de Mejora
+               
