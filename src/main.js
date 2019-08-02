@@ -6,9 +6,10 @@ const filterGenres = document.getElementById('filter-genres')
 
 const movieDataTMDB = app.getTopMoviesFromTMDB(tmdbApiKey);
 
+
 const createTemplateCard = movieList => {
 	let templateCard = '';
-	movieList.slice(0, 10).forEach((movie) => {
+	movieList.forEach((movie) => {
 		const card = `
 	  <div class="card col-md-4" id="${movie.imdb_id}">
 	  <img src="http://image.tmdb.org/t/p/w185/${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
@@ -21,6 +22,7 @@ const createTemplateCard = movieList => {
 	});
 	moviesContainer.innerHTML = templateCard;
 	createModal();
+	createModalByGenre();
 };
 
 window.onload = async function () {
@@ -37,11 +39,63 @@ window.onload = async function () {
 	createTemplateCard(tenTopRatedMovies);
 };
 
-filterGenres.addEventListener('change', async(event) => {
+const genreFilt = async (event) => {
 	const selectedGenre = event.target.value;
-	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey,selectedGenre);
+	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey, selectedGenre);
 	createTemplateCard(gettingMoviesByGenre);
-});
+	
+	return gettingMoviesByGenre
+}
+
+filterGenres.addEventListener('change', genreFilt);
+
+const createModalByGenre = () => {
+	const allMovies = document.querySelectorAll('#movies-container > .card');
+
+	allMovies.forEach((card) => {
+		card.addEventListener('click', async (event) => {
+			// Primero defino un objeto movie vacio
+			let movie = {};
+
+			const movieId = event.currentTarget.id;
+			console.log(movieId);
+
+			// Invoco la funcion movieDataTMDB con await
+			const moviesFromTMDB = await genreFilt;
+			console.log(moviesFromTMDB);
+			
+
+			// Ahora invoco la otra api
+			const gettingMovieOMDB = await app.getMovieByIMDB(movieId, omdbApiKey);
+
+			const [movieTMDB] = moviesFromTMDB.filter(
+				movieFiltered => movieFiltered.imdb_id === movieId
+			);
+
+			const { overview } = movieTMDB;
+			movie = { ...gettingMovieOMDB, overview }
+
+			const {
+				// realizo asignación por destructuring de la data
+				Title,
+				Year,
+				Poster,
+				imdbRating,
+				Production
+			} = movie;
+
+			modalbody.innerHTML = ` 
+            <div>${Title}</div>
+            <div>${Year}</div>
+            <img src="${Poster}">
+            <div><p>Rating</p>${imdbRating}</div>
+			<div><p>Productora</p>${Production}</div>
+			<p>${overview}</p>
+			`;
+			$('#modal').modal('show')
+		});
+	});
+};
 
 const createModal = () => {
 	const allMovies = document.querySelectorAll('#movies-container > .card');
@@ -52,9 +106,11 @@ const createModal = () => {
 			let movie = {};
 
 			const movieId = event.currentTarget.id;
-			
+			console.log(movieId);
+
 			// Invoco la funcion movieDataTMDB con await
 			const moviesFromTMDB = await movieDataTMDB;
+
 			// Ahora invoco la otra api
 			const gettingMovieOMDB = await app.getMovieByIMDB(movieId, omdbApiKey);
 

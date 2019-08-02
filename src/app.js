@@ -41,7 +41,7 @@ const app = {
 		});
 		const resolvedPromisesArr = await Promise.all(moviesWithIMDBid); // moviesWithIMDBid me devuelve un array de promesas, entonces con Promise.All las resuelvo todas
 		return resolvedPromisesArr;
-	},
+		},
 
 };
 
