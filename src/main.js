@@ -4,7 +4,7 @@ const moviesContainer = document.getElementById('movies-container');
 const modalbody = document.getElementById('modal-body');
 const filterGenres = document.getElementById('filter-genres')
 
-const movieDataTMDB = app.getMoviesFromTMDB(tmdbApiKey);
+const movieDataTMDB = app.getTopMoviesFromTMDB(tmdbApiKey);
 
 const createTemplateCard = movieList => {
 	let templateCard = '';
@@ -33,7 +33,7 @@ window.onload = async function () {
 		});
 	});
 
-	const tenTopRatedMovies = await app.getMoviesFromTMDB(tmdbApiKey);
+	const tenTopRatedMovies = await app.getTopMoviesFromTMDB(tmdbApiKey);
 	createTemplateCard(tenTopRatedMovies);
 };
 

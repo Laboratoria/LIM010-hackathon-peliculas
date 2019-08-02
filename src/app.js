@@ -2,7 +2,7 @@ const tmdbApiKey = 'e83ff2d774d6c5b031e45a3bfbfcb919';
 const omdbApiKey = '90e275bc';
 
 const app = {
-	getMoviesFromTMDB: async (tmdbApiKey)=> {		
+	getTopMoviesFromTMDB: async (tmdbApiKey)=> {		
 		const movies = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&language=es-ES&sort_by=popularity.desc&certification_country=US&certification=G&include_adult=false&page=1&with_original_language=en`
 		); // Obteniendo la data
 		const { results } = await movies.json(); // Desesctructuro el objeto movies, obteniendo solo los results
