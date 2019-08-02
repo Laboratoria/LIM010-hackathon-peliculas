@@ -61,14 +61,35 @@ Para el diseño y la implementación de nuestra interfaz, se consideraron las si
 ### Prototipo de alta Fidelidad
 Luego de culminar el prototipo de baja fidelidad y recibir el feedback por parte de los usuarios, se procede a elaborar el diseño de la interfaz usando Figma. A continuación se presenta la Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
 
-![Interfaz-Desktop](https://user-images.githubusercontent.com/50186958/62370503-eeede280-b4f7-11e9-8767-66dc13d1e53f.png)
+![Interfaz-Desktop](https://user-images.githubusercontent.com/50186958/62383062-9d078580-b514-11e9-9b83-da23c829449d.png)
 
-![Interfaz-Mobile](https://user-images.githubusercontent.com/50186958/62370676-6de31b00-b4f8-11e9-988f-0093266f74f2.png)
+![Interfaz-Mobile](https://user-images.githubusercontent.com/50186958/62383099-b27caf80-b514-11e9-97ac-c7e4976971fa.png)
 
 [Diseño en Figma](https://www.figma.com/file/RxMoX6zYJxWA3fYBOm7tqO/CInelandia?node-id=12%3A53)
 
 ## Pruebas de Usabilidad
-Se evaluó la interfaz de nuestro proyecto a fin de generar oportunidades de mejoras, tratando que la impresión de los usuarios sea la más útil y placentera posible. Para ello, nuestra meta es observar si los usuarios entienden de forma clara la navegación (Usabilidad) y el contenido de nuestra interfaz, así como también determinar si el diseño visual es agradable y cumple con los principios de heurísticas de Usabilidad.
+Se evaluó la interfaz de nuestro proyecto con usuarios _target_ a fin de generar oportunidades de mejoras, tratando que la impresión de los usuarios sea la más útil y placentera posible. Para ello, nuestra meta es observar si los usuarios entienden de forma clara la navegación (Usabilidad) y el contenido de nuestra interfaz, así como también determinar si el diseño visual es agradable y cumple con los principios de heurísticas de Usabilidad.
+
+Las sesión de testeo constaron de cinco (5) tareas que llevaron a cabo los usuarios, y se evaluaron métricas cuantitativas y cualitativas. En estas sesiones se aplicaron las siguientes tres (3) técnicas para aplicar las pruebas de Usabilidad:
+
+“Concurrent Think Aloud (CTA)”, es decir, pensar en voz alta de forma simultánea con la interacción.
+
+Concurrent Probing (CP)”, Sondeo Concurrente, es decir, hacer preguntas de seguimiento durante el testeo.
+
+“Retrospective Probing (RP), Sondeo Retrospectivo, es decir, hacer preguntas al usuario al finalizar la sesión. Antes de iniciar la sesión, se le informará a cada participante las pautas de las pruebas, y al final se le harán preguntas de seguimiento para anotar observaciones y evaluar las métricas previamente definidas.
+
+- Tareas a ejecutar:
+1) Buscar una película de su preferencia en el buscador y luego dar click sobre el poster de la película.
+2) Dar click en alguna de las películas más destacadas
+3) Seleccionar un género de su preferencia e indicar que película escogería para un niño.
+4) Filtrar las películas según su valoración, y seleccionarla para ver más detale.
+5) Escoger una película que haya sido lanzada recientemente.
 
 ### Aprendizaje y Oportunidades de Mejora
-               
+Luego de recibir el feedback de los usuarios, el equipo de Mars Company puedo evaluar el comportamiento del participante al interactuar con nuestro producto. Encontramos los siguientes errores de usabilidad, luego de aplicar la evaluación heurística:
+- Al abrir el modal con la información más detallada de la película seleccionada, la imagen desplegada es muy grande.
+- Dificultad para volver al inicio, si el usuario desea realizar otra búsqueda.
+- El título descriptivo de cada película no se visualiza bien, el usuario le costó observarlo
+- Le costó entender los filtros e valoración y Recientes. Se recomienda cambiarlo de nombre
+
+Considerando estos errores de y considerando los principios de heuristicas de usabilidad encontrados en esta iteración, se decide realizar las mejoras pertinentes para mejorar la satisfacción del usuario.
