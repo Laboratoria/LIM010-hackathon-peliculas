@@ -1,7 +1,7 @@
 # Proyecto "Hackathon" 
 
 ![Cinelandia](https://user-images.githubusercontent.com/50186958/62335311-eca46d80-b490-11e9-8ef4-6d605c4eb9a5.png)
-## ¡El mejor contenido para los peques de la casa!!
+## ¡El mejor contenido para los peques de la casa!
 ## Índice
 
 - [Índice](#índice)
