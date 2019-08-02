@@ -1,4 +1,4 @@
-# Proyecto "Hackathon" 
+# Hackathon de Películas: Cinelandia 
 
 ![Cinelandia](https://user-images.githubusercontent.com/50186958/62335311-eca46d80-b490-11e9-8ef4-6d605c4eb9a5.png)
 ## ¡El mejor contenido para los peques de la casa!
@@ -18,7 +18,8 @@
 ***
 
 ## Resumen
-¿Buscas distracción para los pequeños de la casa?, ¿Te resulta complicado encontrar películas para tus hijos por falta de tiempo? Si es así, no te preocupes porque hemos hecho la mejor selección de películas infantiles. No sólo los niños van a disfrutar con estas maravillosas historias, sino que también los padres y toda la familia pasarán un buen rato.
+¿Buscas distracción para los pequeños de la casa? ¿Te resulta complicado encontrar películas para tus hijos? Si es así, no te preocupes porque hemos hecho una selección genial de películas infantiles. **Cinelandia** te brindará la oportunidad de crear momentos únicos en familia, disfrutando de maravillosas historias.
+
 
 ![Familia](https://saposyprincesas.elmundo.es/wp-content/uploads/2017/02/pareja.jpg)
 
@@ -30,17 +31,17 @@ Ingresa haciendo click [AQUI](https://marcelimxo.github.io/LIM010-hackathon-peli
 Los principales usuarios de **Cinelandia** son los padres de familia que por falta de tiempo, no encuentran contenidos infantiles de buena calidad debido a la gran variedad de títulos y géneros que se encuentran en la web, les resulta tedioso realizar búsquedas largas y poco efectivas. Es importante destacar, que los niños serían nuestro usuario final indirecto, ya que son los que disfrutarán las películas.  
 
 ### Objetivo del Producto
-El objetivo de nuestro aplicativo Web es ofrecer un acceso fácil a las mejores películas infantiles de todos los tiempos. Nuestra idea surge por la necesidad que tienen los padres por encontrar el mejor contenido audiovisual para sus hijos.
+El objetivo de nuestro aplicativo Web es ofrecer un acceso fácil a las mejores películas y infantiles de todos los tiempos. Nuestra idea surge por la necesidad que tienen los padres de encontrar los mejores contenidos audiovisuales para los más pequeños de la casa.
 
 ![madre e hijos](https://user-images.githubusercontent.com/50186958/62342322-099a6a00-b4ac-11e9-97ed-e01dd9e206b2.png)
 
 ### ¿Cómo soluciona las necesidades del Usuario?
-Hoy en día, la relación vida laboral y familiar, es una de las preocupaciones de los padres. Tener horas disponibles y pasar tiempo de calidad con hijos es cada vez más importante por los beneficios que tiene sobre el fortalecimiento de los vínculos familiares. Sin embargo, un estudio realizado por la empresa española _Edenred_ en el año 2015, ha revelado que el 71,1% de los padres ha manifestado que no pasa el suficiente tiempo en casa para poder estar con sus hijos, indicando a su vez, que esta tendencia podría aumentar significativamente en el transcurso de los años.
+Hoy en día, la relación vida laboral y familiar, es una de las preocupaciones de los padres. Tener horas disponibles y pasar tiempo de calidad con sus hijos es cada vez más importante por los beneficios que tiene sobre el fortalecimiento de los vínculos familiares. Sin embargo, un estudio realizado por la empresa española _Edenred_ en el año 2015, ha revelado que el 71,1% de los padres ha manifestado que no pasa el suficiente tiempo en casa para poder estar con sus hijos, indicando a su vez, que esta tendencia podría aumentar significativamente en el transcurso de los años.
 
 
-Es por ello, que **MARS Company** ha pensando en ofrecer una solución integral a esta problemática, emprendiendo la tarea de diseñar una interfaz agradable con una clasificación orientativa y facil de entender tanto para los niños como para sus padres que buscan las mejores opciones de películas para el disfrute familiar en la comodidad de su hogar. Estas películas pueden ser seleccionadas a través de un buscador por nombre, o ser filtradas por tres (3) categorías: `Género`, `Recientes` y por `Valoración`. 
+Es por ello, que **MARS Company** ha pensando en ofrecer una solución integral a esta problematica, emprendiendo la tarea de diseñar una interfaz agradable con una clasificación orientativa y facil de entender tanto para los niños como para sus padres que buscan las mejores opciones de películas para el disfrute familiar y en la comodidad de su hogar. Estas películas pueden ser seleccionadas a través de un buscador por nombre, o ser filtradas por tres (3) categorías: `Género`, `Las más recientes` y por `Valoración`. 
 
-Compartir tiempo con los más peques de la casa, mientras disfrutan de películas que transmiten potentes mensajes que pueden dar pie a hablar con nuestros hijos de diversos aspectos de la vida, como el esfuerzo, el amor, la igualdad o la integración de personas con discapacidad, etc, es nuestra razón de ser.
+Compartir tiempo con los más peques de la casa, ahora es posible! mientras disfrutan de películas que transmiten potentes mensajes a los niños en diversos aspectos de la vida, como el esfuerzo, el amor, la igualdad o la integración de personas con discapacidad, etc, es nuestra razón de ser.
 
 
 ### Historias de Usuario
@@ -73,6 +74,10 @@ Cinelandia Mobile
 
 ### Prototipo de alta Fidelidad
 Luego de culminar el prototipo de baja fidelidad y recibir el feedback por parte de los usuarios, se procede a elaborar el diseño de la interfaz usando Figma. A continuación se presenta la Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
+
+![Interfaz-Desktop](https://user-images.githubusercontent.com/50186958/62370503-eeede280-b4f7-11e9-8767-66dc13d1e53f.png)
+
+![Interfaz-Mobile](https://user-images.githubusercontent.com/50186958/62370676-6de31b00-b4f8-11e9-988f-0093266f74f2.png)
 
 [Diseño en Figma](https://www.figma.com/file/RxMoX6zYJxWA3fYBOm7tqO/CInelandia?node-id=12%3A53)
 
