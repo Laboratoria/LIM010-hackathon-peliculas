@@ -17,7 +17,7 @@ const app = {
 	},
 
 	getMovieByIMDB: async (movieId, omdbApiKey) => {
-		const movie = await fetch(`http://www.omdbapi.com/?i=${movieId}&plot=full&apikey=${omdbApiKey}`);
+		const movie = await fetch(`https://www.omdbapi.com/?i=${movieId}&plot=full&apikey=${omdbApiKey}`);
 
 		const movieResolved = await movie.json();
 

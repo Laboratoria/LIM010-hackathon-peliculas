@@ -14,7 +14,7 @@ const createTemplateCard = movieList => {
 	movieList.forEach((movie) => {
 		const card = `
 	  <div class="card col-md-4" id="${movie.imdb_id}">
-	  <img src="http://image.tmdb.org/t/p/w185${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
+	  <img src="https://image.tmdb.org/t/p/w185${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
 	  <div class="card-body">
 		<h5 class="card-title">${movie.title}</h5>
 	  </div>
@@ -53,15 +53,12 @@ filterGenres.addEventListener('change', genreFilt);
 
 const createModal = () => {
 	const allMovies = document.querySelectorAll('#movies-container > .card');
-	console.log(allMovies);
-	
 
 	allMovies.forEach((card) => {
 		card.addEventListener('click', async (event) => {
 			// Primero defino un objeto movie vacio
 			let movie = {};
 			const movieId = event.currentTarget.id;
-			console.log(movieId);
 
 			// Ahora invoco la otra api
 			const gettingMovieOMDB = await app.getMovieByIMDB(movieId, omdbApiKey);
@@ -69,7 +66,6 @@ const createModal = () => {
 			const [movieTMDB] = currentMovieList.filter(
 				movieFiltered => movieFiltered.imdb_id === movieId
 			);
-			console.log(movieTMDB);
 			
 			const { overview, poster_path } = movieTMDB;
 			movie = { ...gettingMovieOMDB, overview, poster_path }
@@ -86,7 +82,7 @@ const createModal = () => {
 
 			modalbody.innerHTML = ` 
             <div>${Year}</div>
-			<img src="http://image.tmdb.org/t/p/w185${poster_path}" class="card-img-top" alt="${Title} poster">
+			<img src="https://image.tmdb.org/t/p/w185${poster_path}" class="card-img-top" alt="${Title} poster">
             <div><p>Rating</p>${imdbRating}</div>
 			<div><p>Productora</p>${Production}</div>
 			<p>${overview}</p>
