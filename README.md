@@ -55,7 +55,21 @@ Para el diseño y la implementación de nuestra interfaz, se consideraron las si
 
 - Historia de Usuario N° 5: _"Como usuario me interesa buscar películas de acuerdo a su valoración para que mi búsqueda incluya las películas infantiles que tenga mayor votación de los medios "_ 
 
-- Historia de Usuario N° 6: _"Como usuario/a me interesa ordenar la búsqueda de películas por fecha de lanzamiento para saber cuales son los contenidos infantiles más recientes"_ 
+- Historia de Usuario N° 6: _"Como usuario/a me interesa ordenar la búsqueda de películas por fecha de lanzamiento para saber cuales son los contenidos infantiles más recientes"_
+
+### Prototipo de baja Fidelidad
+
+Realizamos el prototipo de baja fidelidad con las ideas generales de usabilidad y diseño que teníamos según nuestro usuario.
+
+Cinelandia Desktop
+![enter image description here](https://lh3.googleusercontent.com/RK2IUDGIyuxrH5L3jKARjG_S-s6kN2NNbqeDL0mf61ln26ZKIxgINP-Jjs16rV-PnxGaROhA3ro9)
+
+Cinelandia Desktop versión 2
+![enter image description here](https://lh3.googleusercontent.com/FXvch125wtAPA-rHRv3DXeYP9J3BvAQA_RNXzz6LqorFwMMywR1yQPhkR8_w8aENvAaeklW-67iw)
+
+Cinelandia Mobile
+![enter image description here](https://lh3.googleusercontent.com/Mz93GPN3FF5U6p89BXfD3WmKVG4jIR9hKC2EZrEYhg8c4JZdMtdb8wdzeZM8ex6LrDtlI3XKGVu0)
+
 
 ### Prototipo de alta Fidelidad
 Luego de culminar el prototipo de baja fidelidad y recibir el feedback por parte de los usuarios, se procede a elaborar el diseño de la interfaz usando Figma. A continuación se presenta la Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
