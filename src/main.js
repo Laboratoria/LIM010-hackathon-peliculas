@@ -5,8 +5,10 @@ const modalbody = document.getElementById('modal-body');
 const filterGenres = document.getElementById('filter-genres')
 const modalMovieTitle = document.getElementById('movie-modal-title')
 const currentMovieDisplay = document.getElementById('current-movie-display')
+const topRatedMoviesBtn = document.getElementById('top-rating-movies')
+const moviesReleasedThisYearBtn = document.getElementById('movies-released-this-year');
 
-const movieDataTMDB = app.getTopMoviesFromTMDB(tmdbApiKey);
+const movieDataTMDB = app.getMostPopularMoviesFromTMDB(tmdbApiKey);
 
 let currentMovieList = [];
 
@@ -37,25 +39,24 @@ window.onload = async function () {
 		});
 	});
 
-	const tenTopRatedMovies = await app.getTopMoviesFromTMDB(tmdbApiKey);
-	createTemplateCard(tenTopRatedMovies);
-	currentMovieList = tenTopRatedMovies
+	const mostPopularMovies = await app.getMostPopularMoviesFromTMDB(tmdbApiKey);
+	createTemplateCard(mostPopularMovies);
+	currentMovieList = mostPopularMovies
 	currentMovieDisplay.innerHTML = 'Lo más destacado';
 };
 
-filterGenres.addEventListener('change', async (event)=>{
-	
+filterGenres.addEventListener('change', async (event) => {
 	const select = event.target;
 	const selectedOption = select.options[select.selectedIndex];
-    const value = selectedOption.getAttribute('value');
-    const name = selectedOption.getAttribute('name');
-	
+	const value = selectedOption.getAttribute('value');
+	const name = selectedOption.getAttribute('name');
+
 	const selectedGenre = value;
 	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey, selectedGenre);
 	createTemplateCard(gettingMoviesByGenre);
 	currentMovieList = gettingMoviesByGenre
 	currentMovieDisplay.innerHTML = `Seleccionadas por ${name}`;
-	return currentMovieList 
+	return currentMovieList
 });
 
 const createModal = () => {
@@ -116,10 +117,25 @@ form.addEventListener('submit', async (event) => {
 
 searchField.addEventListener('input', async (event) => {
 	if (event.target.value === '') {
-		const tenTopRatedMovies = await app.getTopMoviesFromTMDB(tmdbApiKey);
-		createTemplateCard(tenTopRatedMovies);
-		currentMovieList = tenTopRatedMovies
+		const mostPopularMovies = await movieDataTMDB;
+		createTemplateCard(mostPopularMovies);
+		currentMovieList = mostPopularMovies
 		currentMovieDisplay.innerHTML = 'Lo más destacado';
 	}
+})
 
+topRatedMoviesBtn.addEventListener('click', async (e) => {
+	e.preventDefault()
+	const topRatedMovies = await app.getTopRatedMoviesFromTMDB(tmdbApiKey);
+	createTemplateCard(topRatedMovies);
+	currentMovieList = topRatedMovies
+	currentMovieDisplay.innerHTML = 'Las mejores valoradas';
+})
+
+moviesReleasedThisYearBtn.addEventListener('click', async (e) => {
+	e.preventDefault()
+	const moviesReleasedThisYear = await app.getMoviesReleasedThisYear(tmdbApiKey);
+	createTemplateCard(moviesReleasedThisYear);
+	currentMovieList = moviesReleasedThisYear;
+	currentMovieDisplay.innerHTML = 'Las más recientes';
 })
