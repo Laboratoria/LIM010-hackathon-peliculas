@@ -37,9 +37,10 @@ window.onload = async function () {
 	createTemplateCard(tenTopRatedMovies);
 };
 
-filterGenres.addEventListener('change', (event) => {
+filterGenres.addEventListener('change', async(event) => {
 	const selectedGenre = event.target.value;
-	console.log(selectedGenre);
+	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey,selectedGenre);
+	createTemplateCard(gettingMoviesByGenre);
 });
 
 const createModal = () => {
@@ -51,6 +52,7 @@ const createModal = () => {
 			let movie = {};
 
 			const movieId = event.currentTarget.id;
+			
 			// Invoco la funcion movieDataTMDB con await
 			const moviesFromTMDB = await movieDataTMDB;
 			// Ahora invoco la otra api
