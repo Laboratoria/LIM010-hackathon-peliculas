@@ -13,7 +13,8 @@
     "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.2",
-    "htmlhint": "^0.10.1"
+    "htmlhint": "^0.10.3",
+    "jest": "^24.8.0"
   },
   "description": "App para recomendar películas a niños",
   "directories": {

@@ -4,6 +4,7 @@ const moviesContainer = document.getElementById('movies-container');
 const modalbody = document.getElementById('modal-body');
 const filterGenres = document.getElementById('filter-genres')
 const modalMovieTitle = document.getElementById('movie-modal-title')
+const currentMovieDisplay = document.getElementById('current-movie-display')
 
 const movieDataTMDB = app.getTopMoviesFromTMDB(tmdbApiKey);
 
@@ -13,8 +14,8 @@ const createTemplateCard = movieList => {
 	let templateCard = '';
 	movieList.forEach((movie) => {
 		const card = `
-	  <div class="card col-md-4" id="${movie.imdb_id}">
-	  <img src="https://image.tmdb.org/t/p/w185${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
+	  <div class="card col-md-3" id="${movie.imdb_id}">
+	  <img src="http://image.tmdb.org/t/p/w185${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
 	  <div class="card-body">
 		<h5 class="card-title">${movie.title}</h5>
 	  </div>
@@ -32,24 +33,30 @@ window.onload = async function () {
 
 	genres.forEach(genresArr => {
 		genresArr.forEach(genre => {
-			filterGenres.innerHTML += `<option value='${genre.id}'>${genre.name}</option>`
+			filterGenres.innerHTML += `<option value='${genre.id}' name='${genre.name}'>${genre.name}</option>`
 		});
 	});
 
 	const tenTopRatedMovies = await app.getTopMoviesFromTMDB(tmdbApiKey);
 	createTemplateCard(tenTopRatedMovies);
 	currentMovieList = tenTopRatedMovies
+	currentMovieDisplay.innerHTML = 'Lo más destacado';
 };
 
-const genreFilt = async (event) => {
-	const selectedGenre = event.target.value;
+filterGenres.addEventListener('change', async (event)=>{
+	
+	const select = event.target;
+	const selectedOption = select.options[select.selectedIndex];
+    const value = selectedOption.getAttribute('value');
+    const name = selectedOption.getAttribute('name');
+	
+	const selectedGenre = value;
 	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey, selectedGenre);
 	createTemplateCard(gettingMoviesByGenre);
 	currentMovieList = gettingMoviesByGenre
-	return currentMovieList
-}
-
-filterGenres.addEventListener('change', genreFilt);
+	currentMovieDisplay.innerHTML = `Seleccionadas por ${name}`;
+	return currentMovieList 
+});
 
 const createModal = () => {
 	const allMovies = document.querySelectorAll('#movies-container > .card');
@@ -100,6 +107,7 @@ form.addEventListener('submit', async (event) => {
 	const searchResults = await app.getMoviesBySearchQuery(tmdbApiKey, searchQuery);
 
 	currentMovieList = searchResults;
+	currentMovieDisplay.innerHTML = `Resultados de "${searchQuery}"`;
 
 	if (searchResults.length === 0) {
 		moviesContainer.innerHTML = '<p> Lo sentimos, no existe ninguna pelicula con ese nombre :-( </p>';
@@ -111,6 +119,7 @@ searchField.addEventListener('input', async (event) => {
 		const tenTopRatedMovies = await app.getTopMoviesFromTMDB(tmdbApiKey);
 		createTemplateCard(tenTopRatedMovies);
 		currentMovieList = tenTopRatedMovies
+		currentMovieDisplay.innerHTML = 'Lo más destacado';
 	}
 
 })
