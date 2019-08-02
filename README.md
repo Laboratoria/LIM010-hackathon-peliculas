@@ -1,7 +1,7 @@
 # Hackathon de Películas: Cinelandia 
 
 ![Cinelandia](https://user-images.githubusercontent.com/50186958/62335311-eca46d80-b490-11e9-8ef4-6d605c4eb9a5.png)
-## ¡El mejor contenido para los peques de la casa!!
+## ¡El mejor contenido para los peques de la casa!
 ## Índice
 
 - [Índice](#índice)
@@ -28,7 +28,7 @@ Ingresa haciendo click [AQUI](https://marcelimxo.github.io/LIM010-hackathon-peli
 ## Investigación UX
 ***
 ### ¿A quién va dirigido?
-Los principales usuarios de **Cinelandia** son los padres de familia que por tener horarios muy ajustados, no cuentan con el tiempo suficiente para buscar contenidos infantiles de buena calidad. Debido a la gran variedad de títulos y géneros que se encuentran en la web, les resulta tedioso realizar búsquedas largas y poco efectivas. Es importante destacar, que los niños serían nuestro usuario final indirecto, ya que son los que disfrutaran la película.  
+Los principales usuarios de **Cinelandia** son los padres de familia que por falta de tiempo, no encuentran contenidos infantiles de buena calidad debido a la gran variedad de títulos y géneros que se encuentran en la web, les resulta tedioso realizar búsquedas largas y poco efectivas. Es importante destacar, que los niños serían nuestro usuario final indirecto, ya que son los que disfrutarán las películas.  
 
 ### Objetivo del Producto
 El objetivo de nuestro aplicativo Web es ofrecer un acceso fácil a las mejores películas y infantiles de todos los tiempos. Nuestra idea surge por la necesidad que tienen los padres de encontrar los mejores contenidos audiovisuales para los más pequeños de la casa.
@@ -47,19 +47,34 @@ Compartir tiempo con los más peques de la casa, ahora es posible! mientras disf
 ### Historias de Usuario
 Para el diseño y la implementación de nuestra interfaz, se consideraron las siguientes cinco (5) historias de usuario definidas en el proyecto. A partir de ellas, se establecieron los Criterios de Aceptación y Definición de Terminado, los cuales representan los requrimientos y necesidades de los usuarios _'target'_:
 
-- Historia de Usuario N° 1: _"Como usuario/a al ingresar a la página quiero visualizar las películas más destacadas para seleccionar el mejor contenido para toda la familia"_ 
+- Historia de Usuario N° 1: _"Como usuario/a al ingresar a la página quiero visualizar las películas más populares para seleccionar el mejor contenido para toda la familia"_ 
 
-- Historia de Usuario N° 2: _"Como usuario/a me interesa ver información detallada de la película como sinopsis, año de lanzamiento, género, rating"_ 
-- Historia de Usuario N° 3: _"Como usuario/a quiero buscar nombres de películas infantiles para ubicar la película de forma más rápida"_ 
+- Historia de Usuario N° 2: _"Como usuario/a me interesa ver información detallada de la película como sinopsis, año de lanzamiento, género y rating"_ 
+- Historia de Usuario N° 3: _"Como usuario/a quiero buscar películas infantiles por el nombre para ubicar la película de forma más rápida"_ 
 
 - Historia de Usuario N° 4: _"Como usuario/a quiero poder seleccionar una película por género para decidir el trama que quiero que vea mi hijo/a"_ 
 
-- Historia de Usuario N° 5: _"Como usuario me interesa buscar películas de acuerdo a su valoración para que mi búsqueda incluya las películas infantiles que tenga mayor votación de los medios "_ 
+- Historia de Usuario N° 5: _"Como usuario me interesa buscar películas de acuerdo a su valoración para que mi búsqueda incluya las películas infantiles que tenga mayor votación de los medios. "_ 
 
-- Historia de Usuario N° 6: _"Como usuario/a me interesa ordenar la búsqueda de películas por fecha de lanzamiento para saber cuales son los contenidos infantiles más recientes"_ 
+- Historia de Usuario N° 6: _"Como usuario/a me interesa ordenar la búsqueda de películas por fecha de lanzamiento para saber cuales son los contenidos infantiles más recientes"_
+
+### Prototipo de baja Fidelidad
+
+Realizamos el prototipo de baja fidelidad con las ideas generales de usabilidad y diseño que teníamos según nuestro usuario.
+
+Cinelandia Desktop
+![enter image description here](https://lh3.googleusercontent.com/RK2IUDGIyuxrH5L3jKARjG_S-s6kN2NNbqeDL0mf61ln26ZKIxgINP-Jjs16rV-PnxGaROhA3ro9)
+
+Cinelandia Desktop versión 2
+![enter image description here](https://lh3.googleusercontent.com/FXvch125wtAPA-rHRv3DXeYP9J3BvAQA_RNXzz6LqorFwMMywR1yQPhkR8_w8aENvAaeklW-67iw)
+
+Cinelandia Mobile
+![enter image description here](https://lh3.googleusercontent.com/Mz93GPN3FF5U6p89BXfD3WmKVG4jIR9hKC2EZrEYhg8c4JZdMtdb8wdzeZM8ex6LrDtlI3XKGVu0)
+
 
 ### Prototipo de alta Fidelidad
 Luego de culminar el prototipo de baja fidelidad y recibir el feedback por parte de los usuarios, se procede a elaborar el diseño de la interfaz usando Figma. A continuación se presenta la Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
+
 
 ![Interfaz-Desktop](https://user-images.githubusercontent.com/50186958/62383062-9d078580-b514-11e9-9b83-da23c829449d.png)
 
