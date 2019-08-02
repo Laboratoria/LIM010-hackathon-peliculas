@@ -41,8 +41,25 @@ const app = {
 		});
 		const resolvedPromisesArr = await Promise.all(moviesWithIMDBid); // moviesWithIMDBid me devuelve un array de promesas, entonces con Promise.All las resuelvo todas
 		return resolvedPromisesArr;
-		},
+	},
 
+	getMoviesBySearchQuery: async (tmdbApiKey,query)=> {
+		const movies = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&language=es-ES&query=${query}&page=1&include_adult=false`);
+		const { results } = await movies.json(); // Desesctructuro el objeto movies, obteniendo solo los results		
+		const moviesWithIMDBid = results.map(async (movie) => { // Busco el id de IMDB de la pelicula
+			const response = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/external_ids?api_key=${tmdbApiKey}`);
+			const { imdb_id } = await response.json(); // Desesctructuro el objeto response, obteniendo solo el id imdb
+
+			const {Rated} = await app.getMovieByIMDB(imdb_id,omdbApiKey);			
+			if (Rated === 'G' || Rated === 'PG') {
+				return { ...movie, imdb_id }				
+			}
+
+		});		
+		const resolvedPromisesArr = await Promise.all(moviesWithIMDBid); // moviesWithIMDBid me devuelve un array de promesas, entonces con Promise.All las resuelvo todas
+		
+		return resolvedPromisesArr.filter(m => m);
+	},
 };
 
 window.app = app;

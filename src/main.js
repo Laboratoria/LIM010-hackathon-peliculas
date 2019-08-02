@@ -46,7 +46,7 @@ const genreFilt = async (event) => {
 	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey, selectedGenre);
 	createTemplateCard(gettingMoviesByGenre);
 	currentMovieList = gettingMoviesByGenre
-	return currentMovieList 
+	return currentMovieList
 }
 
 filterGenres.addEventListener('change', genreFilt);
@@ -66,7 +66,7 @@ const createModal = () => {
 			const [movieTMDB] = currentMovieList.filter(
 				movieFiltered => movieFiltered.imdb_id === movieId
 			);
-			
+
 			const { overview, poster_path } = movieTMDB;
 			movie = { ...gettingMovieOMDB, overview, poster_path }
 
@@ -91,3 +91,26 @@ const createModal = () => {
 		});
 	});
 };
+
+// Haciendo la busqueda
+
+form.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	const searchQuery = searchField.value;
+	const searchResults = await app.getMoviesBySearchQuery(tmdbApiKey, searchQuery);
+
+	currentMovieList = searchResults;
+
+	if (searchResults.length === 0) {
+		moviesContainer.innerHTML = '<p> Lo sentimos, no existe ninguna pelicula con ese nombre :-( </p>';
+	} else createTemplateCard(searchResults);
+});
+
+searchField.addEventListener('input', async (event) => {
+	if (event.target.value === '') {
+		const tenTopRatedMovies = await app.getTopMoviesFromTMDB(tmdbApiKey);
+		createTemplateCard(tenTopRatedMovies);
+		currentMovieList = tenTopRatedMovies
+	}
+
+})
