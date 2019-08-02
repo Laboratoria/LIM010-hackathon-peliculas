@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <h1>Cinelandia</h1>
     <p>Recomendamos pelis para toda la familia</p>
     <form id="form-search-movies">
@@ -26,6 +27,48 @@
             <option disabled selected>Seleccione un Género</option>
         </select>
     </form>
+=======
+  <div class="container">
+    <header class="page-header">
+      <img class="col-md-3 col-md-offset-2" src="img/logo-cinelandia.png" alt="logo">
+      <h1 class="text-hide">Cinelandia</h1>
+
+      <p class="d-flex align-items-start">¡El mejor contenido para los peques de la casa!</p>
+      <div class="d-flex justify-content-end">
+        <form id="form-search-movies" class="form-inline">
+          <label for="search-movies" class="sr-only">¿Qué quieres buscar?</label>
+          <input type="text" name="search" id="search-movies" class="form-control mb-3 mr-sm-2"
+            placeholder="Buscar pelicula" required="">
+          <input type="submit" value="Buscar" class="btn btn-primary mb-2">
+        </form>
+      </div>
+    </header>
+    <main>
+
+      <div class="mb-5">
+        <form id="form-filters-select" class="form-inline justify-content-between">
+          <div class="col-6 col-md-4">
+            <h3 class="col-form-label" id="current-movie-display"></h3>
+          </div>
+          <div class="form-group d-flex justify-content-end">
+            <div class="form-group">
+              <img class="icon" src="img/stars.svg" alt="stars-icon">
+              <button class="btn btn-primary mr-2" id="top-rating-movies">Ranking</button>
+            </div>
+            <div class="form-group">
+              <img class="icon" src="img/popcorn.svg" alt="gendre-icon">
+              <select name="filter-genres" id="filter-genres" class="form-control">
+                <option disabled="" selected="">Género</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <img class="icon" src="img/calendar.svg" alt="calendar-icon">
+              <button class="btn btn-primary ml-2" id="movies-released-this-year"> Estrenos </button>
+            </div>
+          </div>
+        </form>
+      </div>
+>>>>>>> 6b6055091fc437950e4bf6bd33e9d02343c5dd2c
 
     <div class="row" id="movies-container">
     </div>
@@ -51,7 +94,28 @@
                 </div> -->
             </div>
         </div>
+<<<<<<< HEAD
     </div>
+=======
+      </div>
+    </main>
+  </div>
+  <footer>
+   <img src="img/footerdesktopconpersonaje.png" alt="footer">
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script src="app.js"></script>
+  <script src="main.js"></script>
+>>>>>>> 6b6055091fc437950e4bf6bd33e9d02343c5dd2c
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

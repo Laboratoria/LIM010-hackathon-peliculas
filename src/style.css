@@ -19,3 +19,40 @@
     border: 1px transparent;
   }
   
+  .fade{
+    background: rgba(19, 222, 104, 0.5);;
+  }
+
+  body{
+      background-image: url(img/fondodesktopdp.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: top center;
+  }
+
+  .card{
+    background-color: transparent;
+  }
+
+  h3 {
+    font-size: 2rem;
+}
+
+img.icon {
+    width: 20px;
+}
+
+
+
+@media(min-width:768px){
+    body{
+        background-image: url(img/fondomobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top center;
+    }
+
+    
+}
