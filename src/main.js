@@ -42,7 +42,7 @@ window.onload = async function () {
 	const mostPopularMovies = await app.getMostPopularMoviesFromTMDB(tmdbApiKey);
 	createTemplateCard(mostPopularMovies);
 	currentMovieList = mostPopularMovies
-	currentMovieDisplay.innerHTML = 'Lo más destacado';
+	currentMovieDisplay.innerHTML = 'Las más populares';
 };
 
 filterGenres.addEventListener('change', async (event) => {
@@ -55,7 +55,7 @@ filterGenres.addEventListener('change', async (event) => {
 	const gettingMoviesByGenre = await app.getMoviesByGenres(tmdbApiKey, selectedGenre);
 	createTemplateCard(gettingMoviesByGenre);
 	currentMovieList = gettingMoviesByGenre
-	currentMovieDisplay.innerHTML = `Seleccionadas por ${name}`;
+	currentMovieDisplay.innerHTML = `Seleccionadas por ${name.toLowerCase()}`;
 	return currentMovieList
 });
 
@@ -75,6 +75,7 @@ const createModal = () => {
 				movieFiltered => movieFiltered.imdb_id === movieId
 			);
 
+			
 			const { overview, poster_path } = movieTMDB;
 			movie = { ...gettingMovieOMDB, overview, poster_path }
 
@@ -83,17 +84,30 @@ const createModal = () => {
 				Title,
 				Year,
 				imdbRating,
-				Production
+				Production,
+				Genre
 			} = movie;
 
-			modalMovieTitle.innerHTML = `${Title}`
+			console.log(movie);
+			
+			modalMovieTitle.innerHTML = `${Title} - ${Year}`
 
-			modalbody.innerHTML = ` 
-            <div>${Year}</div>
+			modalbody.innerHTML = `
 			<img src="https://image.tmdb.org/t/p/w185${poster_path}" class="card-img-top" alt="${Title} poster">
-            <div><p>Rating</p>${imdbRating}</div>
-			<div><p>Productora</p>${Production}</div>
-			<p>${overview}</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="mx-auto">Rating:${imdbRating}</p>
+				</div>
+				<div class="col-md-12">
+                  <p class="mx-auto">Generos:${Genre}</p>
+				</div>
+				</div>
+
+                <div class="col-md-12">
+                  <p class="mx-auto">${overview}</p>
+                </div>
+
+              			
 			`;
 			$('#modal').modal('show')
 		});
