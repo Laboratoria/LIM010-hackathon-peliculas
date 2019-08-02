@@ -13,7 +13,7 @@ const createTemplateCard = movieList => {
 	let templateCard = '';
 	movieList.forEach((movie) => {
 		const card = `
-	  <div class="card col-md-4" id="${movie.imdb_id}">
+	  <div class="card col-md-3" id="${movie.imdb_id}">
 	  <img src="http://image.tmdb.org/t/p/w185${movie.poster_path}" class="card-img-top" alt="${movie.title} poster">
 	  <div class="card-body">
 		<h5 class="card-title">${movie.title}</h5>

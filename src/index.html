@@ -9,25 +9,37 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="flat/css/flat-ui.css" rel="stylesheet">
     <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Cinelandia</title>
 </head>
 
 <body>
-    <h1>Cinelandia</h1>
-    <p>Recomendamos pelis para toda la familia</p>
-    <form id="form-search-movies">
-        <label for="search-movies">¿Qué peli quieres buscar?</label>
-        <input type="text" name="search" id="search-movies" placeholder="Ingresa el nombre de la peli" required>
-        <input type="submit" value="Buscar peli">
-    </form>
+    <div class="container">
+        <header class="page-header">
+            <h1>Cinelandia</h1>
+            <p>¡El mejor contenido para los peques de la casa!</p>
+            <form id="form-search-movies">
+                <label for="search-movies"></label>
+                <input type="text" name="search" id="search-movies" class="form-control pull-right"
+                    placeholder="Buscar pelicula" required>
+                <span class="fui-search"></span>
+                <input type="submit" value="Buscar">
+            </form>
+        </header>
 
-    <form id="form-filters-select">
-        <select name="filter-genres" id="filter-genres">
-            <option disabled selected>Seleccione un Género</option>
-        </select>
-    </form>
-
-    <div class="row" id="movies-container">
+        <main>
+            <p class="pull-left col-md-5">Lo más destacado</p>
+            <div class="pull-right col-md-5">
+            <button class="btn btn-sm btn-primary">Valoración</button>
+            <form id="form-filters-select" class="form-group">
+                <select name="filter-genres" id="filter-genres" class="form-control">
+                    <option class="select2-choice" disabled selected>Seleccione un Género</option>
+                </select>
+            </form>
+            <button class="btn btn-sm btn-primary"> Reciente </button>
+        </div>
+            <div class="row" id="movies-container">
+            </div>
     </div>
 
 
@@ -52,6 +64,10 @@
             </div>
         </div>
     </div>
+    </main>
+    <footer>
+        <!--IMGEN DE FOOTER-->
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -64,6 +80,7 @@
         </script>
     <script src="app.js"></script>
     <script src="main.js"></script>
+    </div>
 </body>
 
 </html>

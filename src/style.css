@@ -1,0 +1,22 @@
+h1 {
+    overflow: hidden;
+    height: 0px;
+    width: 0px;
+    margin:0;
+  }
+
+.form-control{
+    border-color: #1ABC9C;
+}
+
+.btn {
+    background-color: #8E44AD;
+}
+
+.card{
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 15px;
+}
