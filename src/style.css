@@ -24,7 +24,7 @@
   }
 
   body{
-      background-image: url(img/fondodesktopdp.png);
+      background-image: url(img/fondodesktopPersonajes.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
@@ -44,7 +44,7 @@ img.icon {
 }
 
 
-
+/* 
 @media(min-width:768px){
     body{
         background-image: url(img/fondomobile.png);
@@ -55,4 +55,4 @@ img.icon {
     }
 
     
-}
+} */
